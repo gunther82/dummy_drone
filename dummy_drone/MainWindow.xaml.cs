@@ -136,20 +136,20 @@ namespace dummy_drone
             nad.NADSearchAtPos(SetLatitudeHP.Text, SetLongitudeHP.Text, SetAltitudeHP.Text, SetRadiusHP.Text);
         }
 
-        private void btnSend_pauseHP(object sender, RoutedEventArgs e)
+        private void btnSend_warning(object sender, RoutedEventArgs e)
         {
-            nad.NADPauseSearchAt();
+            nad.NADSendWarning("Battery low");
         }
 
-        private void btnSend_resumeHP(object sender, RoutedEventArgs e)
+        private void btnSend_setInterdictionRadius(object sender, RoutedEventArgs e)
         {
-            nad.NADResumeSearchAt();
+            nad.NADSetInterdictionArea(SetInterdictionRadius.Text);
         }
 
-        private void btnSend_stopHP(object sender, RoutedEventArgs e)
-        {
-            nad.NADStopSearchAt();
-        }
+        //private void btnSend_stopHP(object sender, RoutedEventArgs e)
+        //{
+        //    nad.NADStopSearchAt();
+        //}
 
         private void btnSend_startFM(object sender, RoutedEventArgs e) 
         {

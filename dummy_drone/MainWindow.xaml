@@ -296,27 +296,27 @@
             </Button>
 
             <Button
-                x:Name="ButtonPauseHP"
-                Grid.Row="8"
-                Grid.Column="10"
+                x:Name="ButtonSendWarning"
+                Grid.Row="9"
+                Grid.Column="11"
                 Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
-                ToolTip="pause HP"
-                Click="btnSend_pauseHP"
+                ToolTip="Send Warning"
+                Click="btnSend_warning"
                 Height="30"
-                Width="30">
-                <materialDesign:PackIcon Kind="MotionPause"/>
+                Width="30" Margin="30,49,13,-39">
+                <materialDesign:PackIcon Kind="Alert"/>
             </Button>
 
             <Button
-                x:Name="ButtonResumeHP"
-                Grid.Row="8"
-                Grid.Column="11"
+                x:Name="ButtonSetInterdictionRadius"
+                Grid.Row="9"
+                Grid.Column="6"
                 Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
-                ToolTip="pause HP"
-                Click="btnSend_resumeHP"
+                ToolTip="set interdiction radius"
+                Click="btnSend_setInterdictionRadius"
                 Height="30"
-                Width="30">
-                <materialDesign:PackIcon Kind="Resume"/>
+                Width="30" Grid.ColumnSpan="3" Margin="45,40,35,-30">
+                <materialDesign:PackIcon Kind="RadiusOutline"/>
             </Button>
 
             <Button
@@ -401,6 +401,9 @@
 
 
         </Grid>
+        <TextBox
+            x:Name="SetInterdictionRadius"
+            materialDesign:HintAssist.Hint="InterdictionRadius" Width="56"/>
     </StackPanel>
 
 </Window>
